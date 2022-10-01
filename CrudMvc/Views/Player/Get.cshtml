@@ -1,0 +1,36 @@
+@model List<CrudMvc.Models.Player>
+
+<table class="table table-striped"> 
+  <thead>
+      <tr>
+        <th></th>
+        <th>TeamId</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+  </thead>
+
+  <tbody>
+    @for(int i = 1; i <= Model.Count; i++)
+    {
+      var p = Model[i-1];
+      if(p.Name== "aziz")
+        continue;
+      
+      <tr>
+        <td>@i.</td>
+        <td>@p.TeamId</td>
+        <td>@p.Id</td>
+        <td>@p.Name</td>
+        <td>@p.Position</td>
+        <td>@p.Team</td>
+        <td><a asp-controller ="Player" asp-action="Delete" asp-route-id  ="@p.Id" class="btn btn-secondary"  >Delete</a></td>
+        <td><a asp-controller ="Player" asp-action="Edit" asp-route-id  ="@p.Id" class="btn btn-secondary"  >Edit</a></td>
+      </tr>
+    }
+  </tbody>
+</table>

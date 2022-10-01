@@ -1,0 +1,19 @@
+@model Team 
+
+<form method="post">
+  @if(Model.Id == 0 )
+  {
+    <div class="mb-3">
+    <label>Id ni kiriting : </label>
+    <input asp-for="Id" class="form-control" type="text">
+    </div>
+  }
+  <div class="mb-3">
+    <label>Name</label>
+    <input asp-for="Name" class="form-control" type="text">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Edit</button>
+    
+
+</form>

@@ -1,0 +1,27 @@
+@model Player 
+
+<form method="post">
+  @if(Model.Id == 0 )
+  {
+    <div class="mb-3">
+    <label>Id ni kiriting : </label>
+    <input asp-for="Id" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+  }
+  else
+  {
+    <table class="table table-striped">
+        <thead>
+            <th>Siz tanlagan Id = @Model.Id</th>
+        </thead>
+    </table>
+
+    
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-controller ="Player" asp-action="Get"  class="btn btn-secondary">Orqaga</a>
+  }
+  
+    
+
+</form>

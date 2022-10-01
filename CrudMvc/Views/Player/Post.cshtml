@@ -1,0 +1,20 @@
+@model Player 
+
+<form method="post">
+  <div class="mb-3">
+    <label>TeamId</label>
+    <input asp-for="TeamId" class="form-control" type="text">
+  </div>
+  <div class="mb-3">
+    <label>Name</label>
+    <input asp-for="Name" class="form-control" type="text">
+  </div>
+  
+  <div class="mb-3">
+    <label>Position</label>
+    <input asp-for="Position" class="form-control"  type="text">
+  </div>
+  <button type="submit" class="btn btn-primary">Post</button>
+    
+
+</form>

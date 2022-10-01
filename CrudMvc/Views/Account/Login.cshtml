@@ -1,0 +1,17 @@
+@model Login
+
+<form method="post">
+  <input hidden="true" asp-for="@Model.ReturnUrl">
+  <div class="mb-3">
+    <label>Name</label>
+    <input asp-for="Username" class="form-control" type="text">
+  </div>
+  
+  <div class="mb-3">
+    <label>Register</label>
+    <input asp-for="Password" class="form-control"  type="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+    
+
+</form>
